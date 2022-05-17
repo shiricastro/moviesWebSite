@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>Menu </h1>
+      <a href="/searchMovies">Search for movies</a>
+      <a href="/createMovie">Create new movie</a>
+      <% if (admin){ %>
+        <a href="/usersManagement">Edit Users</a>
+        <%}%>
+    
+  </body>
+</html>

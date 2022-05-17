@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search result Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>Search result </h1>
+<table border="1">
+  <tr>
+    <th>Movie</th>
+    <th>Recommended Movies</th>
+  </tr>
+  <% movies.forEach(x=>{%>
+    <tr>
+      <td><a href="/movie/<%=x.id%>"><%=x.name%></a></td>
+      <td>
+        <ul>
+        <% (x.recommended).forEach(y=>{%>
+        <li><a href="/movie/<%=y.id%>"><%=y.name%></a></li>
+        <%})%>
+        </ul>
+      </td>
+    </tr>
+  <%})%>
+</table>
+
+         
+    <br><br>
+    <a href="/menu">Back ></a>
+  </body>
+</html>

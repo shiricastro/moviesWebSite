@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>User Data</h1>
+      <div class="form_container">
+        <form action="/userData/<% if(update){ %>updateUser <%}else{%>addUser <%}%>" method="POST">
+            <% if(update){ %><input type="hidden" name="userId" value="<%=user.id%>"/><% } %>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" <% if(update){ %> value="<%=user.username%>"<%}%>/><br>
+            <label for="password">Password:</label><br>
+            <input type="text" id="password" name="password" <% if(update){ %> value="<%=user.password%>"<%}%>/><br>
+            <label for="transactions">Num of Transactions:</label><br>
+            <input type="number" id="transactions" name="transactions" <% if(update){ %> value="<%=user.transactions%>"<%}%>/><br><br>
+            <button type="submit">
+              <% if(update){ %>
+                Update
+              <%}else{%>
+                Save
+              <%}%>
+            </button>
+            
+        </form>
+    </div>
+     
+  </body>
+</html>

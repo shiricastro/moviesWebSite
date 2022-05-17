@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search movies Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>Search movie </h1>
+      <div class="form_container">
+        <form action="/searchMovies/search" method="GET">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"/><br>
+
+            <label for="genre">Genre:</label><br>
+            <select id="genre" name="genre">
+                <option value=""></option>
+                <% genres.forEach((x,i)=>{ %>
+                  <option value="<%=x%>"><%=x%></option>
+                  <% })%>
+            </select><br>
+
+            <label for="language">Language:</label><br>
+            <select id="language" name="language">
+                <option value=""></option>
+                <% languages.forEach((x,i)=>{ %>
+                  <option value="<%=x%>"><%=x%></option>
+                  <% })%>
+            </select>
+           
+            <br><br>
+     
+            <button type="submit">search</button>
+        </form>
+    </div>
+    <br><br>
+    <a href="/menu">Back ></a>
+  </body>
+</html>

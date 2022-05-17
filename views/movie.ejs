@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>Movie </h1>
+     <div class="movie_container">
+       <ul>
+        <li>ID: <%=movie.id %></li>
+        <li>Name: <%=movie.name %></li>
+        <li>Genres: <%=movie.genres %></li>
+        <li>Language: <%=movie.language %></li>
+        <% if(movie.image){%>
+          <li>Image:<br><img src="<%=movie.image.medium%>" alt="movie image"/> </li>
+        <%}%>
+       </ul>
+     </div>
+    <br><br>
+    <a href="/searchMovies/searchBack">Back ></a>
+    <br>
+    <a href="/menu">Back to Menu></a>
+    
+  </body>
+</html>

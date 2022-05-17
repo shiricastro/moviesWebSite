@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create new movie Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>Create new movie </h1>
+      <div class="form_container">
+        <form action="/createMovie/saveMovie" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"/><br>
+            <label for="language">Language:</label><br>
+            <input type="text" id="language" name="language"/><br>
+            <label for="genres">Genres:</label><br>
+            <div id="genres">
+            <% genres.forEach((x,i)=>{ %>
+              
+              <input type="checkbox" name="genre" id="genere<%=i%>" value="<%=x%>">
+              <label for="genere<%=i%>"><%=x%></label>
+              
+              <% })%>
+            </div>
+              <br><br>
+     
+            <!-- <input type="text" id="genres" name="genres"/><br><br> -->
+            <button type="submit">add</button>
+        </form>
+    </div>
+    <br><br>
+    <a href="/menu">Back ></a>
+  </body>
+</html>
