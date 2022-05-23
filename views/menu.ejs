@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <h1>Menu </h1>
+      <%-include("partials/title", {text:'Menu'}) %>
       <a href="/searchMovies">Search for movies</a>
       <a href="/createMovie">Create new movie</a>
       <% if (admin){ %>

@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <h1>Users Management </h1>
+      <%-include("partials/title", {text:'Users Management'}) %>
       <ul>
         <% users.forEach(x=>{%>
             <li><%=x.username%> <a href="/usersManagement/deleteUser/<%=x.id%>">delete</a> <a href="/userData/<%=x.id%>">update</a></li>

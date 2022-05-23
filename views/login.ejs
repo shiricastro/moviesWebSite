@@ -5,7 +5,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <h1>Login </h1>
+      <%-include("partials/title", {text:'Login'}) %>
+
       <div class="form_container">
           <form action="/getuserdetails" method="POST">
               <label for="username">Username:</label><br>

@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <h1>Search movie </h1>
+      <%-include("partials/title", {text:'Search movie'}) %>
       <div class="form_container">
         <form action="/searchMovies/search" method="GET">
             <label for="name">Name:</label><br>
